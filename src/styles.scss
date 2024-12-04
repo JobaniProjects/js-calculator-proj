@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@mixin text-center(){
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+body{
+    background-color:#c3dfeb;
+}
+
+footer{
+    margin-top:90px;
+    font-family: Inter;
+    text-align: center;
+}
+
+a.name-a{
+    text-decoration: none;
+    color:black;
+}
+
+a.name-a:hover{
+    color:white;
+    transition-duration: .5s;
+}
+
+.grid-container-1, .grid-container-2, .grid-container-3{
+    font-family: Arial;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.calc-container{
+    width: 254px;
+    height:370px;
+    background-color:black;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:80px;
+    padding-right:12px;
+    padding-left:12px;
+    padding-top: 20px;
+    border-radius:6px;
+}
+
+#one,#two,#three,#four,#five,#six,#seven,#eight,#nine{
+    width:60px;
+    height:60px;
+    border: 1px solid white;
+    background-color:gray;
+    @include text-center();
+}
+
+#zero{
+    // float:left;
+    width:124px;
+    height: 60px;
+    border: 1px solid white;
+    background-color:gray;
+    @include text-center();
+}
+
+// grid-container-1
+.grid-container-1{
+    display:grid;
+    grid-template-columns: 192px 64px;
+    grid-template-rows: 64px;
+}
+
+//grid-container-2
+.grid-container-2{
+    display:grid;
+    grid-template-columns: 64px 64px 64px 1fr;
+    grid-template-rows: 64px 64px 64px 1fr;
+}
+
+// grid-container-3
+.grid-container-3{
+    display:grid;
+    grid-template-columns: 128px 64px 1fr;
+    grid-template-rows: 64px;
+}
+
+#add, #subtract, #multiply, #divide{
+    width:60px;
+    height:60px;
+    background-color:orange;
+    border: 1px solid white;
+    @include text-center();
+}
+
+#decimal, #equals{
+    width:60px;
+    height:60px;
+    background-color:#ababab;
+    border: 1px solid white;
+    @include text-center();
+}
+
+#clear{
+    width:188px;
+    height:60px;
+    background-color:#ababab; 
+    border: 1px solid white;
+    @include text-center();
+    // display: inline-block;
+}
+
+#display{
+    width:254px;
+    height:40px;
+    // background-color:aquamarine;
+    background-color:black;
+    color:white;
+    text-align: right;
+    font-size: 28px;
+    font-family: Orbitron;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
